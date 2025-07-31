@@ -892,7 +892,7 @@ class GoogleDriveAdapter implements FilesystemAdapter
     /**
      * {@inheritdoc}
      */
-    public function listContents(string $directory, bool $recursive): iterable
+    public function listContents(string $directory = '', bool $recursive = false): iterable
     {
         $this->refreshToken();
         $path = $this->prefixer->prefixPath($directory);
